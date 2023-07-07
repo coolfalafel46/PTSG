@@ -1,5 +1,5 @@
 # PTSG (Pizza Tower Save Generator)
-The one and only savefile manager for Pizza Tower you will ever need.
+The one and only savefile manager for [Pizza Tower]([https://pages.github.com/](https://store.steampowered.com/app/2231450/Pizza_Tower/)) you will ever need.
 This tool allows you to edit Pizza Tower save files with ease. No need to understand anything. 
 ## Features
 - Edit scores, ranks, toppins individually
@@ -14,3 +14,5 @@ This tool allows you to edit Pizza Tower save files with ease. No need to unders
 - Edit "global" save data that doesn't rely on save slots (such as unlocked clothing)
 - Learn Python more
 - Get real
+## Important notice
+We are not responsible for you save file if you forgot to backup it, deleted it or if your game suddenly stops launching. This project is no way affiliated, sponsored or in any way endorsed by Tour de Pizza. Pizza Tower belongs to Tour de Pizza.
