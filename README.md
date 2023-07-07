@@ -15,4 +15,4 @@ This tool allows you to edit Pizza Tower save files with ease. No need to unders
 - Learn Python more
 - Get real
 ## Important notice
-We are not responsible for you save file if you forgot to backup it, deleted it or if your game suddenly stops launching. This project is no way affiliated, sponsored or in any way endorsed by Tour de Pizza. Pizza Tower belongs to Tour de Pizza.
+We are not responsible for your save file(s) if you forgot to backup them, deleted them or if your game suddenly stops launching. This project is no way affiliated, sponsored or in any way endorsed by Tour de Pizza. Pizza Tower belongs to Tour de Pizza.
