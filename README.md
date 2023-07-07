@@ -23,7 +23,7 @@ You can
 - Get real
 ## Important notice
 We are not responsible for your save file(s) if you forgot to backup them, deleted them or if your game suddenly stops launching. This project is no way affiliated, sponsored or in any way endorsed by Tour de Pizza. Pizza Tower belongs to Tour de Pizza.
-##Credits
+## Credits
 @FexinShifter - for creating this project
 @ValeraDX - hey, that's me!
 @Geotsx - for helping with GitHub
