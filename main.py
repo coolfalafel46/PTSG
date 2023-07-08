@@ -27,18 +27,27 @@ def maintui():
 
 
 
-def maingui():
-    root = ttk.Window()
-
-    btn_generate = ttk.Button(root, text="Generate 101% save file", bootstyle=PRIMARY)
-    btn_generate.pack(side=LEFT, padx=5, pady=10)
-
-    btn_exit = ttk.Button(root, text="Exit", bootstyle=(DANGER, OUTLINE))
-    btn_exit.pack(side=LEFT, padx=5, pady=10)
-
-    root.mainloop()
+class gui(ttk.Frame):
+    def __init__(self,master):
+        super().__init__(master)
+        self.pack(fill=BOTH, expand=YES)
+        self.create_gui()
+    def create_gui(self):
+        container=ttk.Frame(self,padding=10)
+        container.pack(fill=X)
+        self.buttons=[ttk.Button(master=container,text="exit",bootstyle=PRIMARY, command=self.onclick)]
+        for button in self.buttons:
+            button.pack(side=LEFT, fill=X, expand=YES, pady=10, padx=5)
+    def onclick(self):
+        self.quit()
 
 # Workaround that helps to use this script as a module.
 if __name__ == '__main__':
     print('Welcome to PTSG')
-    maingui()
+    app = ttk.Window(
+        title="Stopwatch",
+        themename="cosmo",
+        resizable=(False, False)
+    )
+    gui(app)
+    app.mainloop()
