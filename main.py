@@ -45,8 +45,8 @@ class gui(ttk.Frame):
 if __name__ == '__main__':
     print('Welcome to PTSG')
     app = ttk.Window(
-        title="Stopwatch",
-        themename="cosmo",
+        title="Pizza Tower Save Generator",
+        themename="superhero",
         resizable=(False, False)
     )
     gui(app)
