@@ -3,6 +3,7 @@ import tkinter as tk
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 from ttkbootstrap.toast import *
+from ttkbootstrap.tooltip import ToolTip
 
 class gui(ttk.Frame):
     def __init__(self,master):
@@ -19,11 +20,16 @@ class gui(ttk.Frame):
                       ]
         # Create buttons from array
         for button in self.buttons:
-            button.pack(side=LEFT, fill=X, expand=YES, pady=10, padx=5)
+            button.pack(side=LEFT, fill=X, expand=YES, pady=10, padx=5,)
+        #Tooltips
+        ToolTip(self.buttons[1], text="Exit the program without affecting your current save", bootstyle=LIGHT)
+        ToolTip(self.buttons[0], text="Get the 101% save file for Pizza Tower.", bootstyle=LIGHT)
 
 
     def onclick(self):  # Quit function for button
         self.quit()
+        print("App closed!")
+        exit(0)
 
     def getfullsavefile(self, path: str = "fullsavefile.ini"):  # Function for downloading the full save file
         full_savefile = requests.get(
@@ -39,6 +45,7 @@ class gui(ttk.Frame):
             duration=3000,
             icon="✅"
         )
+        print("Save file downloaded!")
         finish_toast.show_toast()  # Show the toast
 
 
@@ -48,7 +55,8 @@ if __name__ == '__main__':
     app = ttk.Window(
         title="Pizza Tower Save Generator",
         themename="superhero",
-        resizable=(False, False)
+        # resizable=(False, False),
+        minsize=(500, 400)
     )
     gui(app)
     app.mainloop()
