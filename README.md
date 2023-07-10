@@ -13,14 +13,15 @@ You can
 - Add translations to various langauges in Crowdin (you can't do it yet due to lack of translations yet)
 - Suggest new features and logo designs
 ## Todo
-- Basic GUI
-- Add translations to various langauges in GUI mode
-- Wine support
-- Backup save files before overwriting
-- Choose which save slot to overwrite
-- Edit "global" save data that doesn't rely on save slots (such as unlocked clothing)
-- Learn Python more
-- Get real
+[X]Basic GUI
+[]Advanced GUI
+[]Add translations to various langauges in GUI mode
+[]Wine support
+[]Backup save files before overwriting
+[]Choose which save slot to overwrite
+[]Edit "global" save data that doesn't rely on save slots (such as unlocked clothing)
+[]Learn Python more
+[]Get real
 ## Important notice
 We are not responsible for your save file(s) if you forgot to backup them, deleted them or if your game suddenly stops launching. This project is no way affiliated, sponsored or in any way endorsed by Tour de Pizza. Pizza Tower belongs to Tour de Pizza.
 ## Credits

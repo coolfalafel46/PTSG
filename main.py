@@ -1,5 +1,3 @@
-
-from pathlib import Path
 import requests
 from ttkbootstrap.toast import *
 from ttkbootstrap.tooltip import ToolTip
@@ -7,8 +5,8 @@ from ttkbootstrap.tooltip import ToolTip
 class gui(ttk.Frame):
     def __init__(self,master):
         super().__init__(master)
-        self.create_logo()
         self.pack(fill=BOTH, expand=YES)
+        self.create_logo()
         self.create_gui()
 
     def create_logo(self):
@@ -23,7 +21,7 @@ class gui(ttk.Frame):
         # Define buttons
         self.buttons=[
                       ttk.Button(master=container,text="Get 101% Save File",bootstyle=PRIMARY, command=self.getfullsavefile),
-                      ttk.Button(master=container,text="Exit",bootstyle="DANGER OUTLINE", command=self.onclick),
+                      ttk.Button(master=container,text="Exit",bootstyle=(DANGER, OUTLINE), command=self.onclick),
                       ]
         # Create buttons from array
         for button in self.buttons:
