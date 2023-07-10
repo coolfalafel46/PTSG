@@ -15,7 +15,7 @@ class gui(ttk.Frame):
         # Define logo
         self.logoimg = ttk.PhotoImage(file="Data/Images/Logo.png")
         self.llogom = ttk.Label(master=self,image=self.logoimg)
-        self.llogom.pack(fill=BOTH, expand=YES)
+        self.llogom.pack(fill=Y, expand=YES, )
 
     def create_gui(self):
         container=ttk.Frame(self,padding=10)
