@@ -1,28 +1,27 @@
+
+from pathlib import Path
 import requests
-import tkinter as tk
-import os
-import ttkbootstrap as ttk
-from ttkbootstrap.constants import *
 from ttkbootstrap.toast import *
 from ttkbootstrap.tooltip import ToolTip
-from PIL import ImageTk, Image
-import os
 
 class gui(ttk.Frame):
     def __init__(self,master):
         super().__init__(master)
+        self.create_logo()
         self.pack(fill=BOTH, expand=YES)
         self.create_gui()
+
+    def create_logo(self):
+        # Define logo
+        self.logoimg = ttk.PhotoImage(file="Data/Images/Logo.png")
+        self.llogom = ttk.Label(master=self,image=self.logoimg)
+        self.llogom.pack(fill=BOTH, expand=YES)
 
     def create_gui(self):
         container=ttk.Frame(self,padding=10)
         container.pack(fill=X)
-        # Define logo
-        logoimg = ImageTk.PhotoImage(Image.open("Data/Images/Logo.png"))
-        self.logo = ttk.Label(master=container, image=logoimg)
-        self.logo.pack(side=TOP, fill=X, expand=YES, pady=10, padx=5,)
         # Define buttons
-        self.buttons=[ttk.Label(master=container, image=logoimg),
+        self.buttons=[
                       ttk.Button(master=container,text="Get 101% Save File",bootstyle=PRIMARY, command=self.getfullsavefile),
                       ttk.Button(master=container,text="Exit",bootstyle="DANGER OUTLINE", command=self.onclick),
                       ]
@@ -30,8 +29,8 @@ class gui(ttk.Frame):
         for button in self.buttons:
             button.pack(side=TOP, fill=X, expand=YES, pady=10, padx=5,)
         # Tooltips
-        ToolTip(self.buttons[2], text="Exit the program without affecting your current save", bootstyle=LIGHT)
-        ToolTip(self.buttons[1], text="Get the 101% save file for Pizza Tower.", bootstyle=LIGHT)
+        ToolTip(self.buttons[1], text="Exit the program without affecting your current save", bootstyle=LIGHT)
+        ToolTip(self.buttons[0], text="Get the 101% save file for Pizza Tower.", bootstyle=LIGHT)
 
     def onclick(self):  # Quit function for button
         self.quit()
